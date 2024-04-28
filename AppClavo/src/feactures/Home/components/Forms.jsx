@@ -102,6 +102,7 @@ export const InputNumberForm = (props) => {
                 help={error?.message}
                 validateStatus={error ? "error" : ""}
                 label={props.label}
+                labelCol={props.labelCol}
               >
                 <Checkbox
                   style={props.style}
@@ -170,6 +171,7 @@ export const InputNumberForm = (props) => {
             <>
               {}
               <Form.Item
+              labelCol={props.labelCol}
                 required={props.required}
                 style={{ textAlign: "left" }}
                 help={error?.message}
@@ -190,6 +192,7 @@ export const InputNumberForm = (props) => {
                   }}
                   showSearch={props.showSearch || false}
                   mode={props.mode}
+                  options={props.options}
                 >
                   {props.children}
                 </Select>
@@ -212,6 +215,7 @@ export const InputNumberForm = (props) => {
           return (
             <>
               <Form.Item
+              labelCol={props.labelCol}
                 help={error?.message}
                 validateStatus={error ? "error" : ""}
                 label={props.label}
